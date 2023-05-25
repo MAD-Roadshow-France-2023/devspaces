@@ -47,7 +47,7 @@ commands:
   - id: 1-package
     exec:
       component: tools
-      workingDir: ${PROJECTS_ROOT}/quarkus-quickstarts/getting-started
+      workingDir: ${PROJECTS_ROOT}/devspaces
       commandLine: "mvn package"
       group:
         kind: build
@@ -56,7 +56,7 @@ commands:
     exec:
       label: "Start Development mode (Hot reload + debug)"
       component: tools
-      workingDir: ${PROJECTS_ROOT}/quarkus-quickstarts/getting-started
+      workingDir: ${PROJECTS_ROOT}/devspaces
       commandLine: "mvn compile quarkus:dev"
       group:
         kind: run
