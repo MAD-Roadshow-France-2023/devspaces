@@ -1,0 +1,19 @@
+kind: Secret
+apiVersion: v1
+metadata:
+  name: personal-access-token-gestrem
+  labels:
+    app.kubernetes.io/component: scm-personal-access-token
+    app.kubernetes.io/part-of: che.eclipse.org
+  annotations:
+    che.eclipse.org/che-userid: bdedc78e-fbc3-49c2-b868-075f26092089
+    che.eclipse.org/scm-personal-access-token-name: github
+    che.eclipse.org/scm-url: https://github.com
+    che.eclipse.org/scm-userid: '7984440'
+    che.eclipse.org/scm-username: gestrem
+data:
+  token: Z2hwX2VISHZaRVhaQWhSdThVU0xsd01HQlBFVjJpWEJKUjJFSzNqVA==
+type: Opaque
+
+
+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
