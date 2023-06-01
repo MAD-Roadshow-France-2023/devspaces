@@ -1,8 +1,8 @@
 schemaVersion: 2.1.0
 metadata:
-  name: mad-demo
+  name: fruit-catalog
 components:
-  - name: tools
+  - name: quarkus
     container:
       image: registry.redhat.io/devspaces/udi-rhel8:3.5 
       env:
@@ -14,7 +14,7 @@ components:
           protocol: tcp
           targetPort: 5005
         - exposure: public
-          name: hello-greeting-endpoint
+          name: fruit-endpoint
           protocol: http
           targetPort: 8080
           path: /index.html
@@ -46,8 +46,8 @@ components:
 commands:
   - id: 1-package
     exec:
-      component: tools
-      workingDir: ${PROJECTS_ROOT}/devspaces
+      component: quarkus
+      workingDir: ${PROJECTS_ROOT}/fruit-catalog
       commandLine: "mvn package"
       group:
         kind: build
@@ -55,8 +55,8 @@ commands:
   - id: 2-startdev
     exec:
       label: "Start Development mode (Hot reload + debug)"
-      component: tools
-      workingDir: ${PROJECTS_ROOT}/devspaces
+      component: quarkus
+      workingDir: ${PROJECTS_ROOT}/fruit-catalog
       commandLine: "mvn compile quarkus:dev -DskipTests"
       group:
         kind: run
