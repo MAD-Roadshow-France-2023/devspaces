@@ -14,7 +14,7 @@ While the code is surprisingly simple, under the hood this is using:
  - Infinispan based caching
  - All safely coordinated by the Narayana Transaction Manager
 
-## Requirements
+## Requirements 1
 
 To compile and run this demo you will need:
 

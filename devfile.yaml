@@ -17,7 +17,7 @@ components:
           name: hello-greeting-endpoint
           protocol: http
           targetPort: 8080
-          path: /hello/greeting/devspaces-user
+          path: /index.html
       volumeMounts:
         - name: m2
           path: /home/user/.m2
@@ -57,7 +57,7 @@ commands:
       label: "Start Development mode (Hot reload + debug)"
       component: tools
       workingDir: ${PROJECTS_ROOT}/devspaces
-      commandLine: "mvn compile quarkus:dev"
+      commandLine: "mvn compile quarkus:dev -DskipTests"
       group:
         kind: run
         isDefault: true
