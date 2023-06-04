@@ -1,5 +1,7 @@
 # Quarkus demo: Hibernate ORM with Panache and RESTEasy
 
+[![Contribute](https://www.eclipse.org/che/contribute.svg)](https://devspaces.apps.sno.itix.dev/f?url=https://github.com/MAD-Roadshow-France-2023/devspaces)
+
 **See the gitops branch for setup instructions.**
 
 This is a minimal CRUD service exposing a couple of endpoints over REST,
