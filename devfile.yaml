@@ -22,6 +22,7 @@ components:
         - name: m2
           path: /home/user/.m2
       memoryLimit: 4G
+      cpuLimit: 4
       mountSources: true
   - name: m2
     volume:
@@ -43,6 +44,7 @@ components:
         - name: PGDATA
           value: /tmp/pgdata
       memoryLimit: 512Mi
+      cpuLimit: 2
 commands:
   - id: 1-package
     exec:
